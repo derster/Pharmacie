@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pharmacie</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+ 
+        
+
+       <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            
+            <li class="nav-item">
+            <% if !user_signed_in? %>
+
+              <%= link_to 'Connexion', new_user_session_path, class:'nav-link'%>
+
+            <% else %>
+              <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete , class:'nav-link'%> 
+            <%end%>
+            </li>
+           
+          </ul>
+        </nav>
+        <h3 class="text-muted">Project name</h3>
+      </div>
+
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+        <%= yield %>
+
+      <footer class="footer">
+        <p>&copy; Company 2017</p>
+      </footer>
+
+    </div>  
+  </body>

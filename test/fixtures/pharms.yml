@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commune: MyString
+  pharma_name: MyString
+  owner_name: MyString
+  sub_owner_name: MyString
+  description: MyText
+  tel: MyString
+  adresse: MyString
+  lat: MyString
+  long: MyString
+  h_openning: MyString
+  h_closing: MyString
+  speciality: MyText
+
+two:
+  commune: MyString
+  pharma_name: MyString
+  owner_name: MyString
+  sub_owner_name: MyString
+  description: MyText
+  tel: MyString
+  adresse: MyString
+  lat: MyString
+  long: MyString
+  h_openning: MyString
+  h_closing: MyString
+  speciality: MyText

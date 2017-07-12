@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+ 
+  <%= @pharm.commune %>
+</p>
+
+<p>
+ 
+  <%= @pharm.pharma_name %>
+</p>
+
+<p>
+ 
+  <%= @pharm.owner_name %>
+</p>
+
+<p>
+ 
+  <%= @pharm.sub_owner_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pharm.description %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @pharm.tel %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @pharm.adresse %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @pharm.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @pharm.long %>
+</p>
+
+<p>
+  <strong>H openning:</strong>
+  <%= @pharm.h_openning %>
+</p>
+
+<p>
+  <strong>H closing:</strong>
+  <%= @pharm.h_closing %>
+</p>
+
+<p>
+  <strong>Speciality:</strong>
+  <%= @pharm.speciality %>
+</p>
+
+<%= link_to 'Edit', edit_pharm_path(@pharm) %> |
+<%= link_to 'Back', pharms_path %>

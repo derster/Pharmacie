@@ -1,0 +1,87 @@
+<%= form_for(pharm) do |f| %>
+  <% if pharm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pharm.errors.count, "error") %> prohibited this pharm from being saved:</h2>
+      <ul>
+      <% pharm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :Commune %> 
+  
+    
+<%= f.select(:commune) do %>
+    <%= options_for_select(
+    [
+      ['Abengourou', 'abengourou'], ['Abobo', 'abobo' ],['Abobodoume','abobodoume'],['Aboisso','aboisso'],['Adjame','adjame'],['Agboville','agboville'],['Agnibilekro','agnibilekro'],['Anyama','anyama'],['Attecoube','attecoube'],
+      ['Bingerville','bingerville'],['Bondoukou','bondoukou'],['Bouafle','bouafle'],['Bouake','bouake'],['Cocody','cocody'],['Dabou','dabou'],['Daloa','daloa'],['Dimbokro','dimbokro'],['Divo','divo'],['Duekoue','duekoue'],['Ferkessedougou','ferkessedougou'],
+      ['Gagnoa','gagnoa'],['Grand-Bassam','grand bassam'],['Guiglo','guiglo'],['2 Plateau','2 plateau'],['Issia','issia'],['Koumassi','koumassi'],['Man','man'],['Marcory','marcory'],['Odienne','odienne'],['Plateau','plateau'],['Port Bouet','port bouet'],
+      ['Vridi','vridi'],['Riviera','riviera'],['San Pedro','san pedro'],['Soubre','soubre'],['Toumoditoumodi','toumodi'],['Treichville','treichville'],['Williamsville','williamsville'],['Yamoussoukro','yamoussoukro'],['Yopougon','yopougon']
+    ]
+    )%>
+<%end%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Nom_de_la_pharmacie %> 
+    <%= f.text_field :pharma_name, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Nom_du_pharmacien %> 
+    <%= f.text_field :owner_name, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sub_owner_name %> 
+    <%= f.text_field :sub_owner_name, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %> 
+    <%= f.text_area :description, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tel %> 
+    <%= f.text_field :tel, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :adresse %> 
+    <%= f.text_field :adresse, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :lat %> 
+    <%= f.text_field :lat, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :long %> 
+    <%= f.text_field :long, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :h_openning %> 
+    <%= f.text_field :h_openning, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :h_closing %> 
+    <%= f.text_field :h_closing, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :speciality %> 
+    <%= f.text_area :speciality, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class:'btn btn-success' %>
+  </div>
+<% end %>

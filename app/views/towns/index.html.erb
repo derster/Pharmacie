@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Toutes les townacies</h1>
+
+<%= link_to 'Ajouter une townacie', new_town_path, class:'btn btn-success'%>
+
+<table class="table">
+  
+    <% @towns.each do |town| %>
+      <tr>
+        <td><%= town.name %></td>
+        <td>
+            <%= link_to 'Show', town, class:'btn btn-secondary' %>
+            <%= link_to 'Edit', edit_town_path(town), class:'btn btn-primary' %>
+            <%= link_to 'Destroy', town, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-warning' %>
+      </td>
+ 
+      </tr>
+
+      
+      
+    <% end %>
+ 
+</table>
+ 
+
