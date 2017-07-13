@@ -10,14 +10,11 @@
       <tr>
         <td><%= pharm.commune %></td>
         <td><%= pharm.pharma_name %></td>
-        <td><%= pharm.owner_name %></td>
-    
-        <td><%= pharm.tel %></td>
         <td>
-            <%= link_to 'Show', pharm, class:'btn btn-secondary' %>
-            <%= link_to 'Edit', edit_pharm_path(pharm), class:'btn btn-primary' %>
-            <%= link_to 'Destroy', pharm, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-warning' %>
-      </td>
+            <%= link_to 'Show', pharm, class:'btn btn-outline-secondary' %>
+            <%= link_to 'Edit', edit_pharm_path(pharm), class:'btn btn-outline-primary' %>
+            <%= link_to 'Destroy', pharm, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-outline-danger' %>
+        </td>
  
       </tr>
 
