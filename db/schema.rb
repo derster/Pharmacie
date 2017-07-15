@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712104233) do
+ActiveRecord::Schema.define(version: 20170715113250) do
+
+  create_table "gardes", force: :cascade do |t|
+    t.datetime "star_date"
+    t.datetime "end_date"
+    t.integer  "Pharm_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Pharm_id"], name: "index_gardes_on_Pharm_id"
+  end
 
   create_table "pharms", force: :cascade do |t|
     t.string   "commune"
