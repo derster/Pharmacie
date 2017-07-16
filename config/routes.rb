@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'pharms#index'
   devise_for :users
-  resources :pharms
+  resources :pharms do
+    resources :gardes
+  end
   resources :towns
 
   namespace :api do

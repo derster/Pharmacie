@@ -10,33 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715113250) do
+ActiveRecord::Schema.define(version: 20170716110631) do
 
   create_table "gardes", force: :cascade do |t|
+    t.boolean  "garde"
     t.datetime "star_date"
     t.datetime "end_date"
-    t.integer  "Pharm_id"
+    t.integer  "pharm_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Pharm_id"], name: "index_gardes_on_Pharm_id"
+    t.index ["pharm_id"], name: "index_gardes_on_pharm_id"
   end
 
   create_table "pharms", force: :cascade do |t|
     t.string   "commune"
     t.string   "pharma_name"
     t.string   "owner_name"
-    t.string   "sub_owner_name"
     t.text     "description"
     t.string   "tel"
-    t.string   "adresse"
     t.string   "lat"
     t.string   "long"
     t.string   "h_openning"
     t.string   "h_closing"
-    t.text     "speciality"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+  end
+
+  create_table "sqlite_stat1", id: false, force: :cascade do |t|
+    t. "tbl"
+    t. "idx"
+    t. "stat"
   end
 
   create_table "towns", force: :cascade do |t|

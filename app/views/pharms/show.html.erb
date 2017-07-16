@@ -6,18 +6,12 @@
 </p>
 
 <p>
- 
   <%= @pharm.pharma_name %>
 </p>
 
 <p>
  
   <%= @pharm.owner_name %>
-</p>
-
-<p>
- 
-  <%= @pharm.sub_owner_name %>
 </p>
 
 <p>
@@ -29,12 +23,6 @@
   <strong>Tel:</strong>
   <%= @pharm.tel %>
 </p>
-
-<p>
-  <strong>Adresse:</strong>
-  <%= @pharm.adresse %>
-</p>
-
 <p>
   <strong>Lat:</strong>
   <%= @pharm.lat %>
@@ -55,10 +43,7 @@
   <%= @pharm.h_closing %>
 </p>
 
-<p>
-  <strong>Speciality:</strong>
-  <%= @pharm.speciality %>
-</p>
+<%= render 'gardes/form'%>
 
 <%= link_to 'Edit', edit_pharm_path(@pharm) %> |
 <%= link_to 'Back', pharms_path %>

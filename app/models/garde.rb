@@ -1,3 +1,3 @@
 class Garde < ApplicationRecord
-  belongs_to :Pharm
+  belongs_to :pharm
 end

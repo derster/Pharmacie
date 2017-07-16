@@ -1,0 +1,7 @@
+<%= simple_form_for [@pharm, @pharm.gardes.new] do |f| %>
+  <%= f.input_field :garde, as: :boolean, boolean_style: :inline %>
+  <%= f.input :star_date %>
+  <%= f.input :end_date %>
+  
+  <%= f.button :submit %>
+<% end %>
