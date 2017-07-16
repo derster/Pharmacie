@@ -12,8 +12,7 @@ class Api::V1::PharmsController < ApplicationController
     end
     
     private
-
         def set_pharm
             @pharm = Pharm.find(params[:id])
-        end 
+        end
 end

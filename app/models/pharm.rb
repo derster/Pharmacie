@@ -9,4 +9,6 @@ class Pharm < ApplicationRecord
     validates :description, presence:true
     belongs_to :user
     has_many :gardes
+
+    scope :search, -> (search) { where pharms: search }
 end

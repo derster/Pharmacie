@@ -1,2 +1,2 @@
-json.extract! pharm, :id, :commune, :pharma_name, :owner_name, :sub_owner_name, :description, :tel, :adresse, :lat, :long, :h_openning, :h_closing, :speciality, :created_at, :updated_at
+json.extract! pharm, :id, :commune, :pharma_name, :owner_name, :description, :tel, :lat, :long, :h_openning, :h_closing, :created_at, :updated_at, :user_id, :garde, :star_date, :end_date
 json.url pharm_url(pharm, format: :json)

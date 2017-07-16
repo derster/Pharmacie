@@ -14,14 +14,14 @@
     <%= f.label :Commune %> 
   
     
-<%= f.select(:commune) do %>
+<%= f.select(:commune)do %>
     <%= options_for_select(
     [
       ['Abengourou', 'abengourou'], ['Abobo', 'abobo' ],['Abobodoume','abobodoume'],['Aboisso','aboisso'],['Adjame','adjame'],['Agboville','agboville'],['Agnibilekro','agnibilekro'],['Anyama','anyama'],['Attecoube','attecoube'],
       ['Bingerville','bingerville'],['Bondoukou','bondoukou'],['Bouafle','bouafle'],['Bouake','bouake'],['Cocody','cocody'],['Dabou','dabou'],['Daloa','daloa'],['Dimbokro','dimbokro'],['Divo','divo'],['Duekoue','duekoue'],['Ferkessedougou','ferkessedougou'],
       ['Gagnoa','gagnoa'],['Grand-Bassam','grand bassam'],['Guiglo','guiglo'],['2 Plateau','2 plateau'],['Issia','issia'],['Koumassi','koumassi'],['Man','man'],['Marcory','marcory'],['Odienne','odienne'],['Plateau','plateau'],['Port Bouet','port bouet'],
       ['Vridi','vridi'],['Riviera','riviera'],['San Pedro','san pedro'],['Soubre','soubre'],['Toumoditoumodi','toumodi'],['Treichville','treichville'],['Williamsville','williamsville'],['Yamoussoukro','yamoussoukro'],['Yopougon','yopougon']
-    ]
+    ], @pharm.commune
     )%>
 <%end%>
   </div>
@@ -66,6 +66,11 @@
     <%= f.text_field :h_closing, class:'form-control' %>
   </div>
 
+<div class="form-group">
+  <%= f.label :garde, 'Garde' %>
+   <%= f.radio_button :garde, true, :value => true%>
+   <%= f.radio_button :garde, false, :value => false%>
+</div>
   <div class="form-group">
     <%= f.submit class:'btn btn-success' %>
   </div>

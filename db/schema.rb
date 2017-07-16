@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716110631) do
+ActiveRecord::Schema.define(version: 20170716181710) do
 
   create_table "gardes", force: :cascade do |t|
     t.boolean  "garde"
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(version: 20170716110631) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.boolean  "garde"
+    t.datetime "star_date"
+    t.datetime "end_date"
   end
 
   create_table "sqlite_stat1", id: false, force: :cascade do |t|

@@ -5,9 +5,9 @@ class PharmsController < ApplicationController
   # GET /pharms.json
   def index
     if params[:search]
-      @pharms = Pharm.all.where(commune:params[:search])
+      @pharms = Pharm.all.search(commune:params[:search]).where(garde:true)
     else
-      @pharms = Pharm.all
+      @pharms = Pharm.where(garde:true).all
     end
   end
 
@@ -74,6 +74,6 @@ class PharmsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharm_params
-      params.require(:pharm).permit(:commune, :pharma_name, :owner_name, :description, :tel, :lat, :long, :h_openning, :h_closing)
+      params.require(:pharm).permit(:commune, :pharma_name, :owner_name, :description, :tel, :lat, :long, :h_openning, :h_closing, :garde, :star_date, :end_date)
     end
 end
