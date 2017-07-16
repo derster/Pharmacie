@@ -2,7 +2,7 @@ class GardesController < ApplicationController
      before_action :authenticate_user!, :set_garde, only: [:show, :edit, :update, :destroy]
     
     def index
-        @gardes = Garde.all   
+        @gardes = Garde.includes(:pharm).all.where(garde:true).all
     end
 
     def show 
