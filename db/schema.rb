@@ -40,12 +40,6 @@ ActiveRecord::Schema.define(version: 20170716181710) do
     t.datetime "end_date"
   end
 
-  create_table "sqlite_stat1", id: false, force: :cascade do |t|
-    t. "tbl"
-    t. "idx"
-    t. "stat"
-  end
-
   create_table "towns", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false

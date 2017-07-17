@@ -2,7 +2,7 @@ class Api::V1::PharmsController < ApplicationController
     before_action :set_pharm, except: [:index]
     def index
         if params[:search]
-            @pharms = Pharm.all.where(commune:params[:search])
+            @pharms = Pharm.all.where(commune:params[:search]).where(garde:true)
         else
             @pharms = Pharm.all
         end
