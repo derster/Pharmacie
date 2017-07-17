@@ -4,7 +4,7 @@ class Api::V1::PharmsController < ApplicationController
         if params[:search]
             @pharms = Pharm.all.where(commune:params[:search]).where(garde:true)
         else
-            @pharms = Pharm.all
+            @pharms = Pharm.all.where(garde:true)
         end
     end
 
