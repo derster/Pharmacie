@@ -25,6 +25,7 @@
               <%= link_to 'Connexion', new_user_session_path, class:'nav-link'%>
 
             <% else %>
+              <%= link_to 'Ajouter une pharmacie', new_pharm_path, class:'btn btn-success'%>
               <%= link_to 'Deconnexion', destroy_user_session_path, method: :delete , class:'nav-link'%> 
             <%end%>
             </li>
