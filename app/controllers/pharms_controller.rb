@@ -31,7 +31,6 @@ class PharmsController < ApplicationController
   # POST /pharms
   # POST /pharms.json
   def create
-    @pharm = Pharm.find(params[:id])
     @pharm = Pharm.new(pharm_params)
     @pharm.user_id = current_user.id
 
