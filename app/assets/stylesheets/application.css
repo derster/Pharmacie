@@ -15,7 +15,11 @@
  */
 
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+ .container{
+    background: #fff;
+    margin: 22px auto;
+ }
+ 
 .header,
 .marketing,
 .footer {
@@ -23,12 +27,12 @@
   padding-left: 1rem;
 }
 
-/* Custom page header */
+ 
 .header {
   padding-bottom: 1rem;
   border-bottom: .05rem solid #e5e5e5;
 }
-/* Make the masthead heading the same height as the navigation */
+ 
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -39,7 +43,6 @@
 .footer {
   padding-top: 1.5rem;
   color: #777;
-  border-top: .05rem solid #e5e5e5;
 }
 
 /* Customize container */
@@ -48,9 +51,7 @@
     max-width: 46rem;
   }
 }
-.container-narrow > hr {
-  margin: 2rem 0;
-}
+
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -81,7 +82,7 @@
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
@@ -97,6 +98,7 @@
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+  background: #fff;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
