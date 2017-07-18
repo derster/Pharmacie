@@ -15,10 +15,7 @@
  */
 
 
- .container{
-    background: #fff;
-    margin: 22px auto;
- }
+
  
 .header,
 .marketing,
@@ -137,3 +134,9 @@
     width: 900px !important;
     max-width : 100%;
 }}
+
+ .container{
+    background: #fff;
+    margin: 22px auto;
+    width: 660px !important;
+ }
