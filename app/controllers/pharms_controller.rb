@@ -1,5 +1,5 @@
 class PharmsController < ApplicationController
-  before_action :authenticate_user!, :set_pharm, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :set_pharm, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /pharms
   # GET /pharms.json
