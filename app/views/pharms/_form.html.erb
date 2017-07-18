@@ -66,6 +66,17 @@
     <%= f.time_field :h_closing, class:'form-control', value:'20:00' %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :Debut_garde %> 
+    <%= f.date_field :star_date, class:'form-control'%>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :Fin_garde %> 
+    <%= f.date_field :end_date, class:'form-control'%>
+  </div>
+
 <div class="form-group">
   <%= f.label :garde, 'Garde' %>
    <%= f.radio_button :garde, true, :value => true%>

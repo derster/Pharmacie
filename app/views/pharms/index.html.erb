@@ -2,16 +2,16 @@
 
 <h1>Toutes les pharmacies</h1>
 
-<table class="table">
+<table class="table table-striped">
   
     <% @pharms.each do |pharm| %>
       <tr>
         <td><%= pharm.commune.capitalize %></td>
         <td><%= pharm.pharma_name %></td>
         <td>
-            <%= link_to 'Show', pharm, class:'btn btn-outline-secondary' %>
+             
             <%= link_to 'Edit', edit_pharm_path(pharm), class:'btn btn-outline-primary' %>
-            <%= link_to 'Destroy', pharm, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-outline-danger' %>
+          
         </td>
  
       </tr>

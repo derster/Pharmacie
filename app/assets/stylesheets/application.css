@@ -14,6 +14,27 @@
  *= require_self
  */
 
+ .h-text-muted {
+    color: #ffffff!important;
+}
+ .container{
+    background: #fff;
+    margin: 0px auto;
+    width: 660px !important;
+    padding: 15px;
+    margin-bottom: 20px;
+ }
+.header-container{
+  margin: 0px auto;
+  width: 660px !important
+}
+.header-container a{
+  color: #fff;
+} 
+
+.header{
+   background: #5cb85c;
+}
 
 
  
@@ -25,10 +46,6 @@
 }
 
  
-.header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
-}
  
 .header h3 {
   margin-top: 0;
@@ -127,16 +144,3 @@
 }
 
 
-
-
-@media (min-width: 992px){
-.container {
-    width: 900px !important;
-    max-width : 100%;
-}}
-
- .container{
-    background: #fff;
-    margin: 22px auto;
-    width: 660px !important;
- }
