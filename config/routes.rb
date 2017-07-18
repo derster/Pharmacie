@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pharms#index'
+  root 'home#index'
   devise_for :users
   resources :pharms do
     resources :gardes
