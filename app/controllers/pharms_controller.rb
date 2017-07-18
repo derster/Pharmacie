@@ -1,5 +1,5 @@
 class PharmsController < ApplicationController
-  before_action :authenticate_user!, :set_pharm, only: [:index, :show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /pharms
   # GET /pharms.json
@@ -14,20 +14,24 @@ class PharmsController < ApplicationController
   # GET /pharms/1
   # GET /pharms/1.json
   def show
+    @pharm = Pharm.find(params[:id])
   end
 
   # GET /pharms/new
   def new
+
     @pharm = Pharm.new
   end
 
   # GET /pharms/1/edit
   def edit
+    @pharm = Pharm.find(params[:id])
   end
 
   # POST /pharms
   # POST /pharms.json
   def create
+    @pharm = Pharm.find(params[:id])
     @pharm = Pharm.new(pharm_params)
     @pharm.user_id = current_user.id
 
@@ -45,6 +49,7 @@ class PharmsController < ApplicationController
   # PATCH/PUT /pharms/1
   # PATCH/PUT /pharms/1.json
   def update
+    @pharm = Pharm.find(params[:id])
     respond_to do |format|
       if @pharm.update(pharm_params)
         format.html { redirect_to @pharm, notice: 'Pharm was successfully updated.' }
@@ -59,6 +64,7 @@ class PharmsController < ApplicationController
   # DELETE /pharms/1
   # DELETE /pharms/1.json
   def destroy
+    @pharm = Pharm.find(params[:id])
     @pharm.destroy
     respond_to do |format|
       format.html { redirect_to pharms_url, notice: 'Pharm was successfully destroyed.' }
